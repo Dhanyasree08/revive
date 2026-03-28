@@ -1,0 +1,319 @@
+{
+  "users": {
+    "7450e586-5a41-4861-9261-5ae85a30720c": {
+      "id": "7450e586-5a41-4861-9261-5ae85a30720c",
+      "name": "DJ",
+      "email": "dhanyasree.j0405@gmail.com",
+      "password": "66d21f9ee05cea8a3447b88a900d40802b1735e0e1d08c4ffb17440250a4cbbc",
+      "token": "84df46022f28e3bd345b5819e1758d938794cd5c9530f98d614811e9c6dae068",
+      "created_at": "2026-03-28T16:40:50.182227",
+      "streak": 0,
+      "focusTime": 0
+    }
+  },
+  "lessons": {
+    "lesson_1774696286357": {
+      "id": "lesson_1774696286357",
+      "userId": "7450e586-5a41-4861-9261-5ae85a30720c",
+      "title": "computer networks",
+      "subject": "CSE",
+      "priority": "medium",
+      "notes": "",
+      "addedAt": "2026-03-28T16:41:26.725428",
+      "retention": 100,
+      "revisionsDone": 0,
+      "nextRevisionIndex": 0,
+      "uploadedFileId": null,
+      "summary": ""
+    },
+    "lesson_1774696319035": {
+      "id": "lesson_1774696319035",
+      "userId": "7450e586-5a41-4861-9261-5ae85a30720c",
+      "title": "machine learning",
+      "subject": "AML",
+      "priority": "high",
+      "notes": "",
+      "addedAt": "2026-03-28T16:41:59.050040",
+      "retention": 100,
+      "revisionsDone": 0,
+      "nextRevisionIndex": 0,
+      "uploadedFileId": null,
+      "summary": ""
+    },
+    "lesson_1774696351810": {
+      "id": "lesson_1774696351810",
+      "userId": "7450e586-5a41-4861-9261-5ae85a30720c",
+      "title": "ADA",
+      "subject": "CSE",
+      "priority": "low",
+      "notes": "",
+      "addedAt": "2026-03-28T16:42:31.828975",
+      "retention": 100,
+      "revisionsDone": 0,
+      "nextRevisionIndex": 0,
+      "uploadedFileId": "5b66c1b1-ab70-42d2-9c43-7b851ce0b46e",
+      "summary": "Key points from ADA:\n\n\u2022 INNOVATIVE STUDY CIRCLE\n\u2022 where education meets life\n\u2022 Excretory system\n\u2022 \u25cf\n\u2022 Excretory system is responsible for removal of waste\n\u2022 products derived from organisms\n\u2022 metabolism. The excretory system purifies blood.\n\u2022 \u25cf",
+      "uploadedFileName": "Excretory system.pdf",
+      "uploadedFilePath": "uploads\\5b66c1b1-ab70-42d2-9c43-7b851ce0b46e.pdf",
+      "rawTextPreview": "INNOVATIVE STUDY CIRCLE\nwhere education meets life\nExcretory system\n\u25cf\nExcretory system is responsible for removal of waste\nproducts derived from organisms\nmetabolism. The excretory system purifies blood.\n\u25cf\nIt removes urea, uric acid, ammonia, excess water\nand salts\n\u25cf\nExcretory system consists of a pair of kidney, one\nurator arising from each kidney\nleading to to the urinary bladder and the opening\nof the urinary bladder called the urethra\n\u25cf\nNephron is the functional and structural unit of the\nki"
+    },
+    "lesson_1774696367526": {
+      "id": "lesson_1774696367526",
+      "userId": "7450e586-5a41-4861-9261-5ae85a30720c",
+      "title": "NLP",
+      "subject": "AIML",
+      "priority": "high",
+      "notes": "",
+      "addedAt": "2026-03-28T16:42:47.561424",
+      "retention": 100,
+      "revisionsDone": 0,
+      "nextRevisionIndex": 0,
+      "uploadedFileId": "5dd261b4-84b6-4765-99bd-f1cb229070f3",
+      "summary": "Key points from NLP:\n\n\u2022 1. Introduction to ERP Systems\n\u2022 ERP stands for Enterprise Resource Planning. It is an integrated software solution used to manage and coordinate all the core business functions of an organization within a single unified system. ERP connects departments such as Finance, Human Resources, Sales, Inventory, Production, Procurement and Supply Chain into one platform, helping organizations eliminate duplication, reduce manual work, and improve communication. In today\u2019s competitive environment, ERP systems enhance efficiency and provide real-time visibility, allowing businesses to make faster and better decisions.\n\u2022 The concept of ERP evolved from early Material Requirements Planning (MRP) and Manufacturing Resource Planning (MRP-II) systems. Modern ERP solutions\u2014powered by cloud computing, artificial intelligence (AI), and data analytics\u2014are flexible, scalable, and accessible to organizations of all sizes. Popular systems such as SAP, Oracle ERP Cloud, Microsoft Dynamics 365, Odoo, Tally, and Infor help enterprises streamline operations and achieve sustainable growth by integrating technology with business strategy.\n\u2022 Example: When a customer places an order, ERP automatically updates sales records, inventory levels, production plans, and accounting data without manual input.\n\u2022 Popular ERP Software: SAP ERP, Oracle ERP Cloud, Microsoft Dynamics 365, Odoo, Tally ERP, and Infor.\n\u2022 Centralized Database: ERP uses a single database that stores information accessible to all authorized departments.\n\u2022 Functions Covered: Accounting, manufacturing, procurement, sales, logistics, inventory, and customer relationship management.\n\u2022 Evolution: Originated from Material Requirements Planning (MRP) systems in the 1960s \u2192 evolved into MRP-II (Manufacturing Resource Planning) \u2192 modern ERP integrates all business operations.",
+      "uploadedFileName": "software content.docx",
+      "uploadedFilePath": "uploads\\5dd261b4-84b6-4765-99bd-f1cb229070f3.docx",
+      "rawTextPreview": "1. Introduction to ERP Systems\nERP stands for Enterprise Resource Planning. It is an integrated software solution used to manage and coordinate all the core business functions of an organization within a single unified system. ERP connects departments such as Finance, Human Resources, Sales, Inventory, Production, Procurement and Supply Chain into one platform, helping organizations eliminate duplication, reduce manual work, and improve communication. In today\u2019s competitive environment, ERP syst"
+    }
+  },
+  "revisions": {
+    "rev_lesson_1774696286357_0_1774696286": {
+      "id": "rev_lesson_1774696286357_0_1774696286",
+      "lessonId": "lesson_1774696286357",
+      "lessonTitle": "computer networks",
+      "userId": "7450e586-5a41-4861-9261-5ae85a30720c",
+      "intervalIndex": 0,
+      "intervalLabel": "Immediate",
+      "scheduledAt": "2026-03-28T16:41:26.725428",
+      "status": "pending",
+      "result": null,
+      "demoMode": false,
+      "notified": true
+    },
+    "rev_lesson_1774696286357_1_1774696286": {
+      "id": "rev_lesson_1774696286357_1_1774696286",
+      "lessonId": "lesson_1774696286357",
+      "lessonTitle": "computer networks",
+      "userId": "7450e586-5a41-4861-9261-5ae85a30720c",
+      "intervalIndex": 1,
+      "intervalLabel": "3-Day",
+      "scheduledAt": "2026-03-31T16:41:26.725428",
+      "status": "pending",
+      "result": null,
+      "demoMode": false
+    },
+    "rev_lesson_1774696286357_2_1774696286": {
+      "id": "rev_lesson_1774696286357_2_1774696286",
+      "lessonId": "lesson_1774696286357",
+      "lessonTitle": "computer networks",
+      "userId": "7450e586-5a41-4861-9261-5ae85a30720c",
+      "intervalIndex": 2,
+      "intervalLabel": "10-Day",
+      "scheduledAt": "2026-04-07T16:41:26.725428",
+      "status": "pending",
+      "result": null,
+      "demoMode": false
+    },
+    "rev_lesson_1774696319035_0_1774696319": {
+      "id": "rev_lesson_1774696319035_0_1774696319",
+      "lessonId": "lesson_1774696319035",
+      "lessonTitle": "machine learning",
+      "userId": "7450e586-5a41-4861-9261-5ae85a30720c",
+      "intervalIndex": 0,
+      "intervalLabel": "Immediate",
+      "scheduledAt": "2026-03-28T16:41:59.050040",
+      "status": "pending",
+      "result": null,
+      "demoMode": false,
+      "notified": true
+    },
+    "rev_lesson_1774696319035_1_1774696319": {
+      "id": "rev_lesson_1774696319035_1_1774696319",
+      "lessonId": "lesson_1774696319035",
+      "lessonTitle": "machine learning",
+      "userId": "7450e586-5a41-4861-9261-5ae85a30720c",
+      "intervalIndex": 1,
+      "intervalLabel": "3-Day",
+      "scheduledAt": "2026-03-31T16:41:59.050040",
+      "status": "pending",
+      "result": null,
+      "demoMode": false
+    },
+    "rev_lesson_1774696319035_2_1774696319": {
+      "id": "rev_lesson_1774696319035_2_1774696319",
+      "lessonId": "lesson_1774696319035",
+      "lessonTitle": "machine learning",
+      "userId": "7450e586-5a41-4861-9261-5ae85a30720c",
+      "intervalIndex": 2,
+      "intervalLabel": "10-Day",
+      "scheduledAt": "2026-04-07T16:41:59.050040",
+      "status": "pending",
+      "result": null,
+      "demoMode": false
+    },
+    "rev_lesson_1774696351810_0_1774696351": {
+      "id": "rev_lesson_1774696351810_0_1774696351",
+      "lessonId": "lesson_1774696351810",
+      "lessonTitle": "ADA",
+      "userId": "7450e586-5a41-4861-9261-5ae85a30720c",
+      "intervalIndex": 0,
+      "intervalLabel": "Immediate",
+      "scheduledAt": "2026-03-28T16:42:31.828975",
+      "status": "pending",
+      "result": null,
+      "demoMode": false,
+      "notified": true
+    },
+    "rev_lesson_1774696351810_1_1774696351": {
+      "id": "rev_lesson_1774696351810_1_1774696351",
+      "lessonId": "lesson_1774696351810",
+      "lessonTitle": "ADA",
+      "userId": "7450e586-5a41-4861-9261-5ae85a30720c",
+      "intervalIndex": 1,
+      "intervalLabel": "3-Day",
+      "scheduledAt": "2026-03-31T16:42:31.828975",
+      "status": "pending",
+      "result": null,
+      "demoMode": false
+    },
+    "rev_lesson_1774696351810_2_1774696351": {
+      "id": "rev_lesson_1774696351810_2_1774696351",
+      "lessonId": "lesson_1774696351810",
+      "lessonTitle": "ADA",
+      "userId": "7450e586-5a41-4861-9261-5ae85a30720c",
+      "intervalIndex": 2,
+      "intervalLabel": "10-Day",
+      "scheduledAt": "2026-04-07T16:42:31.828975",
+      "status": "pending",
+      "result": null,
+      "demoMode": false
+    },
+    "rev_lesson_1774696367526_0_1774696367": {
+      "id": "rev_lesson_1774696367526_0_1774696367",
+      "lessonId": "lesson_1774696367526",
+      "lessonTitle": "NLP",
+      "userId": "7450e586-5a41-4861-9261-5ae85a30720c",
+      "intervalIndex": 0,
+      "intervalLabel": "Immediate",
+      "scheduledAt": "2026-03-28T16:42:47.561424",
+      "status": "pending",
+      "result": null,
+      "demoMode": false,
+      "notified": true
+    },
+    "rev_lesson_1774696367526_1_1774696367": {
+      "id": "rev_lesson_1774696367526_1_1774696367",
+      "lessonId": "lesson_1774696367526",
+      "lessonTitle": "NLP",
+      "userId": "7450e586-5a41-4861-9261-5ae85a30720c",
+      "intervalIndex": 1,
+      "intervalLabel": "3-Day",
+      "scheduledAt": "2026-03-31T16:42:47.561424",
+      "status": "pending",
+      "result": null,
+      "demoMode": false
+    },
+    "rev_lesson_1774696367526_2_1774696367": {
+      "id": "rev_lesson_1774696367526_2_1774696367",
+      "lessonId": "lesson_1774696367526",
+      "lessonTitle": "NLP",
+      "userId": "7450e586-5a41-4861-9261-5ae85a30720c",
+      "intervalIndex": 2,
+      "intervalLabel": "10-Day",
+      "scheduledAt": "2026-04-07T16:42:47.561424",
+      "status": "pending",
+      "result": null,
+      "demoMode": false
+    }
+  },
+  "sessions": [],
+  "config": {
+    "email": {
+      "host": "smtp.gmail.com",
+      "port": 587,
+      "email": "dhanyasree.j0405@gmail.com",
+      "password": "akbt lzvs qvfq wivt"
+    },
+    "anthropic_key": "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"
+  },
+  "beep_reminders": [
+    {
+      "id": "9e2f3e23-9caa-4124-ac40-755d44a81989",
+      "userId": "7450e586-5a41-4861-9261-5ae85a30720c",
+      "lessonTitle": "Revision",
+      "scheduledAt": "2026-03-28T16:49:31.545864",
+      "triggered": true
+    },
+    {
+      "id": "9d6dd87f-e593-4e1d-b8de-cdc16d7998e8",
+      "userId": "7450e586-5a41-4861-9261-5ae85a30720c",
+      "lessonTitle": "computer networks",
+      "scheduledAt": "2026-03-28T16:45:36.212882",
+      "triggered": true
+    },
+    {
+      "id": "e73e4a7c-66a0-4053-b039-f355ecd557e1",
+      "userId": "7450e586-5a41-4861-9261-5ae85a30720c",
+      "lessonTitle": "computer networks",
+      "scheduledAt": "2026-03-28T17:02:46.383268",
+      "triggered": true
+    }
+  ],
+  "automation_log": [
+    {
+      "ts": "2026-03-28T10:23:06.842082",
+      "msg": "[SYSTEM] Revive database initialized."
+    },
+    {
+      "ts": "2026-03-28T16:41:32.416192",
+      "msg": "[AUTO] Revision due: computer networks [Immediate]"
+    },
+    {
+      "ts": "2026-03-28T16:42:02.431380",
+      "msg": "[AUTO] Revision due: machine learning [Immediate]"
+    },
+    {
+      "ts": "2026-03-28T16:42:32.446652",
+      "msg": "[AUTO] Revision due: ADA [Immediate]"
+    },
+    {
+      "ts": "2026-03-28T16:43:02.472388",
+      "msg": "[AUTO] Revision due: NLP [Immediate]"
+    },
+    {
+      "ts": "2026-03-28T16:44:31.551889",
+      "msg": "[BEEP] Scheduled alert for: Revision at 2026-03-28T16:49:31.545864"
+    },
+    {
+      "ts": "2026-03-28T16:45:06.226658",
+      "msg": "[BEEP] Scheduled alert for: computer networks at 2026-03-28T16:45:36.212882"
+    },
+    {
+      "ts": "2026-03-28T16:47:47.235896",
+      "msg": "[UPLOAD] Notes uploaded for: ADA"
+    },
+    {
+      "ts": "2026-03-28T16:47:47.235896",
+      "msg": "[AI] Summary generated (467 chars)"
+    },
+    {
+      "ts": "2026-03-28T16:57:08.701973",
+      "msg": "[UPLOAD] Notes uploaded for: NLP"
+    },
+    {
+      "ts": "2026-03-28T16:57:08.701973",
+      "msg": "[AI] Summary generated (1855 chars)"
+    },
+    {
+      "ts": "2026-03-28T16:57:56.864944",
+      "msg": "[UPLOAD] Notes uploaded for: ADA"
+    },
+    {
+      "ts": "2026-03-28T16:57:56.864944",
+      "msg": "[AI] Summary generated (243 chars)"
+    },
+    {
+      "ts": "2026-03-28T17:02:16.388693",
+      "msg": "[BEEP] Scheduled alert for: computer networks at 2026-03-28T17:02:46.383268"
+    }
+  ]
+}

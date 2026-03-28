@@ -1,0 +1,1766 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  
+<meta charset="UTF-8" />
+  
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+<title>Revive — Adaptive Learning System</title>
+  
+<link rel="stylesheet" href="style.css" />
+  
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  
+<script src="https://cdn.jsdelivr.net/npm/chart.js">
+
+</script>
+
+</head>
+
+<body>
+
+<!-- ===================== AUTH SCREEN ===================== -->
+
+<div id="auth-screen" class="screen active">
+  
+<div class="auth-bg">
+    
+<div class="auth-orb orb1">
+
+</div>
+    
+<div class="auth-orb orb2">
+
+</div>
+    
+<div class="auth-orb orb3">
+
+</div>
+    
+<div class="grid-overlay">
+
+</div>
+  
+</div>
+  
+<div class="auth-container">
+    
+<div class="auth-brand">
+      
+<div class="brand-icon">
+⬡
+</div>
+      
+<span class="brand-name">
+Revive
+</span>
+    
+</div>
+    
+<div class="auth-card">
+      
+<div class="auth-tabs">
+        
+<button class="auth-tab active" onclick="switchTab('login')">
+Sign In
+</button>
+        
+<button class="auth-tab" onclick="switchTab('signup')">
+Sign Up
+</button>
+      
+</div>
+      
+<!-- LOGIN -->
+      
+<div id="login-form" class="auth-form active">
+        
+<h2 class="auth-title">
+Welcome back
+</h2>
+        
+<p class="auth-subtitle">
+Your memory palace awaits
+</p>
+        
+<div class="input-group">
+          
+<label>
+Email
+</label>
+          
+<input type="email" id="login-email" placeholder="you@example.com" />
+        
+</div>
+        
+<div class="input-group">
+          
+<label>
+Password
+</label>
+          
+<input type="password" id="login-password" placeholder="••••••••" />
+        
+</div>
+        
+<button class="btn-primary" onclick="handleLogin()">
+          
+<span>
+Enter System
+</span>
+          
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+<path d="M5 12h14M12 5l7 7-7 7"/>
+
+</svg>
+        
+</button>
+        
+<p class="auth-hint">
+Demo: test@demo.com / password123
+</p>
+      
+</div>
+      
+<!-- SIGNUP -->
+      
+<div id="signup-form" class="auth-form">
+        
+<h2 class="auth-title">
+Create Account
+</h2>
+        
+<p class="auth-subtitle">
+Start forging memories
+</p>
+        
+<div class="input-group">
+          
+<label>
+Full Name
+</label>
+          
+<input type="text" id="signup-name" placeholder="Your Name" />
+        
+</div>
+        
+<div class="input-group">
+          
+<label>
+Email
+</label>
+          
+<input type="email" id="signup-email" placeholder="you@example.com" />
+        
+</div>
+        
+<div class="input-group">
+          
+<label>
+Password
+</label>
+          
+<input type="password" id="signup-password" placeholder="••••••••" />
+        
+</div>
+        
+<button class="btn-primary" onclick="handleSignup()">
+          
+<span>
+Begin Journey
+</span>
+          
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+<path d="M5 12h14M12 5l7 7-7 7"/>
+
+</svg>
+        
+</button>
+      
+</div>
+    
+</div>
+  
+</div>
+
+</div>
+
+<!-- ===================== APP SCREEN ===================== -->
+
+<div id="app-screen" class="screen">
+  
+<!-- SIDEBAR -->
+  
+<aside class="sidebar" id="sidebar">
+    
+<div class="sidebar-brand">
+      
+<div class="brand-icon">
+⬡
+</div>
+      
+<span>
+Revive
+</span>
+    
+</div>
+    
+<nav class="sidebar-nav">
+      
+<a class="nav-item active" onclick="showSection('dashboard')" data-section="dashboard">
+        
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+<rect x="3" y="3" width="7" height="7"/>
+
+<rect x="14" y="3" width="7" height="7"/>
+
+<rect x="3" y="14" width="7" height="7"/>
+
+<rect x="14" y="14" width="7" height="7"/>
+
+</svg>
+        
+<span>
+Dashboard
+</span>
+      
+</a>
+      
+<a class="nav-item" onclick="showSection('lessons')" data-section="lessons">
+        
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+<path d="M4 19.5A2.5 2.5 0 016.5 17H20"/>
+
+<path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
+
+</svg>
+        
+<span>
+Lessons
+</span>
+      
+</a>
+      
+<a class="nav-item" onclick="showSection('calendar')" data-section="calendar">
+        
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+<rect x="3" y="4" width="18" height="18" rx="2"/>
+
+<line x1="16" y1="2" x2="16" y2="6"/>
+
+<line x1="8" y1="2" x2="8" y2="6"/>
+
+<line x1="3" y1="10" x2="21" y2="10"/>
+
+</svg>
+        
+<span>
+Calendar
+</span>
+      
+</a>
+      
+<a class="nav-item" onclick="showSection('revisions')" data-section="revisions">
+        
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+<polyline points="23 4 23 10 17 10"/>
+
+<path d="M20.49 15a9 9 0 11-2.12-9.36L23 10"/>
+
+</svg>
+        
+<span>
+Revisions
+</span>
+        
+<span class="nav-badge" id="revision-badge">
+0
+</span>
+      
+</a>
+      
+<a class="nav-item" onclick="showSection('analytics')" data-section="analytics">
+        
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+<line x1="18" y1="20" x2="18" y2="10"/>
+
+<line x1="12" y1="20" x2="12" y2="4"/>
+
+<line x1="6" y1="20" x2="6" y2="14"/>
+
+</svg>
+        
+<span>
+Analytics
+</span>
+      
+</a>
+      
+<a class="nav-item" onclick="showSection('curve')" data-section="curve">
+        
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+<path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+
+</svg>
+        
+<span>
+Forgetting Curve
+</span>
+      
+</a>
+      
+<a class="nav-item" onclick="showSection('automation')" data-section="automation">
+        
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+<circle cx="12" cy="12" r="3"/>
+
+<path d="M19.07 4.93l-1.41 1.41M5.34 18.66l-1.41 1.41M2 12h2M20 12h2M5.34 5.34L3.93 3.93M18.66 18.66l1.41 1.41M12 2v2M12 20v2"/>
+
+</svg>
+        
+<span>
+Automation
+</span>
+      
+</a>
+      
+<a class="nav-item" onclick="showSection('timer')" data-section="timer">
+        
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+<circle cx="12" cy="12" r="10"/>
+
+<polyline points="12 6 12 12 16 14"/>
+
+</svg>
+        
+<span>
+Focus Timer
+</span>
+      
+</a>
+    
+</nav>
+    
+<div class="sidebar-footer">
+      
+<div class="user-info" id="sidebar-user">
+        
+<div class="user-avatar" id="user-avatar-sidebar">
+U
+</div>
+        
+<div class="user-meta">
+          
+<span class="user-name-sidebar" id="user-name-display">
+User
+</span>
+          
+<span class="user-role">
+Learner
+</span>
+        
+</div>
+      
+</div>
+      
+<button class="btn-logout" onclick="handleLogout()">
+        
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+<path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/>
+
+<polyline points="16 17 21 12 16 7"/>
+
+<line x1="21" y1="12" x2="9" y2="12"/>
+
+</svg>
+      
+</button>
+    
+</div>
+  
+</aside>
+  
+<!-- MAIN CONTENT -->
+  
+<main class="main-content">
+    
+<header class="top-bar">
+      
+<div class="top-left">
+        
+<button class="hamburger" onclick="toggleSidebar()">
+          
+<span>
+
+</span>
+
+<span>
+
+</span>
+
+<span>
+
+</span>
+        
+</button>
+        
+<div class="page-title-wrap">
+          
+<h1 class="page-title" id="page-title">
+Dashboard
+</h1>
+          
+<span class="page-date" id="page-date">
+
+</span>
+        
+</div>
+      
+</div>
+      
+<div class="top-right">
+        
+<div class="demo-badge" id="demo-toggle" onclick="toggleDemoMode()">
+          
+<span class="demo-dot">
+
+</span>
+          
+<span id="demo-label">
+Demo Mode: OFF
+</span>
+        
+</div>
+        
+<button class="notif-btn" onclick="showSection('revisions')">
+          
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+<path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+
+<path d="M13.73 21a2 2 0 01-3.46 0"/>
+
+</svg>
+          
+<span class="notif-dot" id="notif-dot" style="display:none">
+
+</span>
+        
+</button>
+        
+<div class="user-avatar-top" id="user-avatar-top">
+U
+</div>
+      
+</div>
+    
+</header>
+    
+<!-- ========= DASHBOARD SECTION ========= -->
+    
+<section id="section-dashboard" class="content-section active">
+      
+<div class="welcome-banner">
+        
+<div class="welcome-text">
+          
+<p class="welcome-sub">
+Good to see you,
+</p>
+          
+<h2 class="welcome-name" id="welcome-name">
+Learner
+</h2>
+          
+<p class="welcome-quote">
+"An investment in knowledge pays the best interest."
+</p>
+        
+</div>
+        
+<div class="welcome-art">
+          
+<div class="brain-visual">
+            
+<div class="brain-ring r1">
+
+</div>
+            
+<div class="brain-ring r2">
+
+</div>
+            
+<div class="brain-ring r3">
+
+</div>
+            
+<span class="brain-icon">
+🧠
+</span>
+          
+</div>
+        
+</div>
+      
+</div>
+      
+<div class="stats-row">
+        
+<div class="stat-card">
+          
+<div class="stat-icon" style="background:var(--accent-blue-dim)">
+            
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="2">
+
+<path d="M4 19.5A2.5 2.5 0 016.5 17H20"/>
+
+<path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
+
+</svg>
+          
+</div>
+          
+<div class="stat-info">
+            
+<span class="stat-value" id="stat-lessons">
+0
+</span>
+            
+<span class="stat-label">
+Total Lessons
+</span>
+          
+</div>
+        
+</div>
+        
+<div class="stat-card">
+          
+<div class="stat-icon" style="background:var(--accent-green-dim)">
+            
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="2">
+
+<polyline points="23 4 23 10 17 10"/>
+
+<path d="M20.49 15a9 9 0 11-2.12-9.36L23 10"/>
+
+</svg>
+          
+</div>
+          
+<div class="stat-info">
+            
+<span class="stat-value" id="stat-revisions">
+0
+</span>
+            
+<span class="stat-label">
+Revisions Due
+</span>
+          
+</div>
+        
+</div>
+        
+<div class="stat-card">
+          
+<div class="stat-icon" style="background:var(--accent-orange-dim)">
+            
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-orange)" stroke-width="2">
+
+<circle cx="12" cy="12" r="10"/>
+
+<polyline points="12 6 12 12 16 14"/>
+
+</svg>
+          
+</div>
+          
+<div class="stat-info">
+            
+<span class="stat-value" id="stat-streak">
+0
+</span>
+            
+<span class="stat-label">
+Day Streak 🔥
+</span>
+          
+</div>
+        
+</div>
+        
+<div class="stat-card">
+          
+<div class="stat-icon" style="background:var(--accent-purple-dim)">
+            
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="2">
+
+<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+
+</svg>
+          
+</div>
+          
+<div class="stat-info">
+            
+<span class="stat-value" id="stat-score">
+0%
+</span>
+            
+<span class="stat-label">
+Retention Score
+</span>
+          
+</div>
+        
+</div>
+      
+</div>
+      
+<div class="dash-grid">
+        
+<div class="dash-card wide">
+          
+<div class="card-header">
+            
+<h3>
+Recent Lessons
+</h3>
+            
+<button class="btn-small" onclick="showSection('lessons')">
+Add Lesson +
+</button>
+          
+</div>
+          
+<div id="recent-lessons-list" class="lesson-list-compact">
+            
+<div class="empty-state-small">
+No lessons yet. Add your first lesson!
+</div>
+          
+</div>
+        
+</div>
+        
+<div class="dash-card">
+          
+<div class="card-header">
+            
+<h3>
+Upcoming Revisions
+</h3>
+          
+</div>
+          
+<div id="upcoming-revisions-list" class="revision-list-compact">
+            
+<div class="empty-state-small">
+All caught up!
+</div>
+          
+</div>
+        
+</div>
+        
+<div class="dash-card">
+          
+<div class="card-header">
+            
+<h3>
+Retention Overview
+</h3>
+          
+</div>
+          
+<canvas id="mini-retention-chart" height="160">
+
+</canvas>
+        
+</div>
+      
+</div>
+    
+</section>
+    
+<!-- ========= LESSONS SECTION ========= -->
+    
+<section id="section-lessons" class="content-section">
+      
+<div class="section-header">
+        
+<h2>
+Lesson Library
+</h2>
+        
+<button class="btn-primary small" onclick="openLessonModal()">
+          
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+
+<line x1="12" y1="5" x2="12" y2="19"/>
+
+<line x1="5" y1="12" x2="19" y2="12"/>
+
+</svg>
+          Add Lesson        
+</button>
+      
+</div>
+      
+<div class="filter-bar">
+        
+<button class="filter-btn active" onclick="filterLessons('all', this)">
+All
+</button>
+        
+<button class="filter-btn" onclick="filterLessons('high', this)">
+High Priority
+</button>
+        
+<button class="filter-btn" onclick="filterLessons('medium', this)">
+Medium
+</button>
+        
+<button class="filter-btn" onclick="filterLessons('low', this)">
+Low
+</button>
+      
+</div>
+      
+<div id="lessons-grid" class="lessons-grid">
+        
+<div class="empty-state">
+          
+<div class="empty-icon">
+📚
+</div>
+          
+<p>
+No lessons added yet.
+</p>
+          
+<button class="btn-primary" onclick="openLessonModal()">
+Add Your First Lesson
+</button>
+        
+</div>
+      
+</div>
+    
+</section>
+    
+<!-- ========= CALENDAR SECTION ========= -->
+    
+<section id="section-calendar" class="content-section">
+      
+<div class="section-header">
+        
+<h2>
+Revision Calendar
+</h2>
+        
+<div class="cal-nav">
+          
+<button class="btn-icon" onclick="changeMonth(-1)">
+‹
+</button>
+          
+<span id="cal-month-label">
+Month
+</span>
+          
+<button class="btn-icon" onclick="changeMonth(1)">
+›
+</button>
+        
+</div>
+      
+</div>
+      
+<div class="calendar-wrap">
+        
+<div class="cal-days-header">
+          
+<span>
+Sun
+</span>
+
+<span>
+Mon
+</span>
+
+<span>
+Tue
+</span>
+
+<span>
+Wed
+</span>
+          
+<span>
+Thu
+</span>
+
+<span>
+Fri
+</span>
+
+<span>
+Sat
+</span>
+        
+</div>
+        
+<div id="calendar-grid" class="cal-grid">
+
+</div>
+      
+</div>
+      
+<div id="cal-day-detail" class="cal-detail" style="display:none">
+        
+<h3 id="cal-detail-date">
+
+</h3>
+        
+<div id="cal-detail-items">
+
+</div>
+      
+</div>
+    
+</section>
+    
+<!-- ========= REVISIONS SECTION ========= -->
+    
+<section id="section-revisions" class="content-section">
+      
+<div class="section-header">
+        
+<h2>
+Revision Queue
+</h2>
+        
+<div class="rev-stats-mini">
+          
+<span id="rev-due-count" class="badge-orange">
+0 Due
+</span>
+          
+<span id="rev-upcoming-count" class="badge-blue">
+0 Upcoming
+</span>
+        
+</div>
+      
+</div>
+      
+<div id="revisions-list" class="revisions-container">
+        
+<div class="empty-state">
+          
+<div class="empty-icon">
+✅
+</div>
+          
+<p>
+No revisions due. Add lessons to start scheduling!
+</p>
+        
+</div>
+      
+</div>
+    
+</section>
+    
+<!-- ========= ANALYTICS SECTION ========= -->
+    
+<section id="section-analytics" class="content-section">
+      
+<div class="section-header">
+
+<h2>
+Analytics & Insights
+</h2>
+
+</div>
+      
+<div class="analytics-grid">
+        
+<div class="analytics-card big">
+          
+<div class="card-header">
+
+<h3>
+Weekly Completion Rate
+</h3>
+
+</div>
+          
+<canvas id="weekly-chart" height="200">
+
+</canvas>
+        
+</div>
+        
+<div class="analytics-card">
+          
+<div class="card-header">
+
+<h3>
+Priority Distribution
+</h3>
+
+</div>
+          
+<canvas id="priority-chart" height="200">
+
+</canvas>
+        
+</div>
+        
+<div class="analytics-card">
+          
+<div class="card-header">
+
+<h3>
+Focus vs Break Time
+</h3>
+
+</div>
+          
+<canvas id="focus-chart" height="200">
+
+</canvas>
+        
+</div>
+        
+<div class="analytics-card big">
+          
+<div class="card-header">
+
+<h3>
+Productivity Score Trend
+</h3>
+
+</div>
+          
+<canvas id="productivity-chart" height="200">
+
+</canvas>
+        
+</div>
+      
+</div>
+      
+<div class="insights-row">
+        
+<div class="insight-card">
+          
+<span class="insight-icon">
+🎯
+</span>
+          
+<div class="insight-body">
+            
+<span class="insight-val" id="ins-completion">
+0%
+</span>
+            
+<span class="insight-label">
+Completion Rate
+</span>
+          
+</div>
+        
+</div>
+        
+<div class="insight-card">
+          
+<span class="insight-icon">
+⏱️
+</span>
+          
+<div class="insight-body">
+            
+<span class="insight-val" id="ins-focustime">
+0m
+</span>
+            
+<span class="insight-label">
+Total Focus Time
+</span>
+          
+</div>
+        
+</div>
+        
+<div class="insight-card">
+          
+<span class="insight-icon">
+📈
+</span>
+          
+<div class="insight-body">
+            
+<span class="insight-val" id="ins-productivity">
+0
+</span>
+            
+<span class="insight-label">
+Productivity Score
+</span>
+          
+</div>
+        
+</div>
+        
+<div class="insight-card">
+          
+<span class="insight-icon">
+🔥
+</span>
+          
+<div class="insight-body">
+            
+<span class="insight-val" id="ins-streak">
+0
+</span>
+            
+<span class="insight-label">
+Best Streak
+</span>
+          
+</div>
+        
+</div>
+      
+</div>
+    
+</section>
+    
+<!-- ========= FORGETTING CURVE SECTION ========= -->
+    
+<section id="section-curve" class="content-section">
+      
+<div class="section-header">
+        
+<h2>
+Forgetting Curve Visualizer
+</h2>
+        
+<select id="curve-lesson-select" class="select-styled" onchange="updateCurveForLesson()">
+          
+<option value="all">
+All Lessons (Average)
+</option>
+        
+</select>
+      
+</div>
+      
+<div class="curve-container">
+        
+<div class="curve-info">
+          
+<div class="curve-stat">
+            
+<span class="curve-stat-val" id="curve-retention">
+100%
+</span>
+            
+<span class="curve-stat-label">
+Current Retention
+</span>
+          
+</div>
+          
+<div class="curve-stat">
+            
+<span class="curve-stat-val" id="curve-next-rev">
+-
+</span>
+            
+<span class="curve-stat-label">
+Next Revision
+</span>
+          
+</div>
+          
+<div class="curve-stat">
+            
+<span class="curve-stat-val" id="curve-revisions-done">
+0
+</span>
+            
+<span class="curve-stat-label">
+Revisions Done
+</span>
+          
+</div>
+        
+</div>
+        
+<div class="curve-chart-wrap">
+          
+<canvas id="forgetting-curve-chart">
+
+</canvas>
+        
+</div>
+      
+</div>
+      
+<div class="ebbinghaus-info">
+        
+<div class="info-card">
+          
+<h4>
+📉 Without Revision
+</h4>
+          
+<p>
+Memory drops to ~40% within 24 hours and to under 20% within a week without review.
+</p>
+        
+</div>
+        
+<div class="info-card">
+          
+<h4>
+📈 With Spaced Repetition
+</h4>
+          
+<p>
+Each revision reinforces memory, extending retention and reducing required review time over time.
+</p>
+        
+</div>
+        
+<div class="info-card">
+          
+<h4>
+🎯 Optimal Intervals
+</h4>
+          
+<p>
+Review at: 1 day → 3 days → 10 days → 30 days → 90 days for long-term retention above 90%.
+</p>
+        
+</div>
+      
+</div>
+    
+</section>
+    
+<!-- ========= AUTOMATION SECTION ========= -->
+    
+<section id="section-automation" class="content-section">
+      
+<div class="section-header">
+        
+<h2>
+n8n Automation Engine
+</h2>
+        
+<span class="status-pill green" id="automation-status">
+Active
+</span>
+      
+</div>
+      
+<div class="automation-grid">
+        
+<div class="workflow-card">
+          
+<div class="wf-header">
+            
+<div class="wf-icon">
+⚡
+</div>
+            
+<div>
+              
+<h3>
+Lesson Added Workflow
+</h3>
+              
+<span class="wf-status active">
+Running
+</span>
+            
+</div>
+          
+</div>
+          
+<div class="wf-flow">
+            
+<div class="wf-node trigger">
+📝 Lesson Added
+</div>
+            
+<div class="wf-arrow">
+→
+</div>
+            
+<div class="wf-node process">
+💾 Store Data
+</div>
+            
+<div class="wf-arrow">
+→
+</div>
+            
+<div class="wf-node process">
+📊 Calc Intervals
+</div>
+            
+<div class="wf-arrow">
+→
+</div>
+            
+<div class="wf-node wait">
+⏳ Wait Node
+</div>
+            
+<div class="wf-arrow">
+→
+</div>
+            
+<div class="wf-node notify">
+📧 Send Email
+</div>
+          
+</div>
+          
+<div class="wf-stats">
+            
+<span id="wf-runs">
+Executions: 
+<b id="wf-runs-val">
+0
+</b>
+
+</span>
+            
+<span id="wf-last">
+Last: 
+<b id="wf-last-val">
+—
+</b>
+
+</span>
+          
+</div>
+        
+</div>
+        
+<div class="workflow-card">
+          
+<div class="wf-header">
+            
+<div class="wf-icon">
+🔄
+</div>
+            
+<div>
+              
+<h3>
+Revision Reminder Workflow
+</h3>
+              
+<span class="wf-status active">
+Running
+</span>
+            
+</div>
+          
+</div>
+          
+<div class="wf-flow">
+            
+<div class="wf-node trigger">
+⏰ Cron Trigger
+</div>
+            
+<div class="wf-arrow">
+→
+</div>
+            
+<div class="wf-node process">
+🔍 Check Queue
+</div>
+            
+<div class="wf-arrow">
+→
+</div>
+            
+<div class="wf-node process">
+🎯 Match Lessons
+</div>
+            
+<div class="wf-arrow">
+→
+</div>
+            
+<div class="wf-node notify">
+📱 Notify User
+</div>
+          
+</div>
+          
+<div class="wf-stats">
+            
+<span>
+Reminders Sent: 
+<b id="reminders-sent-val">
+0
+</b>
+
+</span>
+          
+</div>
+        
+</div>
+        
+<div class="automation-log-card">
+          
+<div class="card-header">
+            
+<h3>
+Automation Log
+</h3>
+            
+<button class="btn-small" onclick="clearLog()">
+Clear
+</button>
+          
+</div>
+          
+<div id="automation-log" class="log-container">
+            
+<div class="log-entry info">
+[SYSTEM] Revive automation engine initialized.
+</div>
+          
+</div>
+        
+</div>
+        
+<div class="email-config-card">
+          
+<div class="card-header">
+
+<h3>
+Email Configuration
+</h3>
+
+</div>
+          
+<div class="config-form">
+            
+<div class="input-group">
+              
+<label>
+SMTP Host
+</label>
+              
+<input type="text" id="smtp-host" placeholder="smtp.gmail.com" value="smtp.gmail.com"/>
+            
+</div>
+            
+<div class="input-group">
+              
+<label>
+Email Address
+</label>
+              
+<input type="email" id="smtp-email" placeholder="your@email.com"/>
+            
+</div>
+            
+<div class="input-group">
+              
+<label>
+App Password
+</label>
+              
+<input type="password" id="smtp-pass" placeholder="••••••••••••"/>
+            
+</div>
+            
+<button class="btn-primary small" onclick="saveEmailConfig()">
+Save & Test
+</button>
+          
+</div>
+        
+</div>
+
+        <!-- ===== AI SUMMARY CONFIG ===== -->
+        <div class="email-config-card" style="margin-top:16px">
+          <div class="card-header">
+            <h3>🤖 AI Notes Summary</h3>
+          </div>
+          <div class="config-form">
+            <p style="color:var(--text-secondary);font-size:13px;margin-bottom:12px">
+              Enter your Anthropic API key to enable AI-generated key notes from uploaded PDFs/DOCX/TXT files.
+              These summaries are automatically attached to revision reminder emails.
+            </p>
+            <div class="input-group">
+              <label>Anthropic API Key</label>
+              <input type="password" id="anthropic-key" placeholder="sk-ant-..." />
+            </div>
+            <button class="btn-primary small" onclick="saveAiConfig()">Save API Key</button>
+          </div>
+        </div>
+
+        <!-- ===== BEEP REMINDER CONFIG ===== -->
+        <div class="email-config-card" style="margin-top:16px">
+          <div class="card-header">
+            <h3>🔔 Laptop Beep Alerts</h3>
+          </div>
+          <div class="config-form">
+            <p style="color:var(--text-secondary);font-size:13px;margin-bottom:12px">
+              Set timed beep alerts that play directly from your laptop speakers.
+              No hardware required — uses the Web Audio API.
+              You can also set alerts from each lesson card.
+            </p>
+            <div style="display:flex;gap:10px;align-items:flex-end">
+              <div class="input-group" style="flex:2;margin-bottom:0">
+                <label>Lesson / Reminder Name</label>
+                <input type="text" id="quick-beep-title" placeholder="e.g. Neural Networks revision" />
+              </div>
+              <div class="input-group" style="flex:1;margin-bottom:0">
+                <label>In (minutes)</label>
+                <input type="number" id="quick-beep-delay" value="5" min="0.5" step="0.5" />
+              </div>
+              <button class="btn-primary small" style="margin-bottom:0;white-space:nowrap"
+                onclick="setBeepReminder(document.getElementById('quick-beep-title').value||'Revision',document.getElementById('quick-beep-delay').value)">
+                Set Alert
+              </button>
+            </div>
+            <button class="btn-secondary small" style="margin-top:10px" onclick="playBeep(880,400,'square',3)">
+              🔊 Test Beep Sound
+            </button>
+          </div>
+        </div>
+
+      
+</div>
+    
+</section>
+    
+<!-- ========= TIMER SECTION ========= -->
+    
+<section id="section-timer" class="content-section">
+      
+<div class="section-header">
+
+<h2>
+Focus Timer
+</h2>
+
+</div>
+      
+<div class="timer-layout">
+        
+<div class="timer-main">
+          
+<div class="timer-mode-tabs">
+            
+<button class="timer-tab active" onclick="setTimerMode('focus', this)">
+Focus
+</button>
+            
+<button class="timer-tab" onclick="setTimerMode('short', this)">
+Short Break
+</button>
+            
+<button class="timer-tab" onclick="setTimerMode('long', this)">
+Long Break
+</button>
+          
+</div>
+          
+<div class="timer-display">
+            
+<svg class="timer-ring" viewBox="0 0 200 200">
+              
+<circle class="ring-bg" cx="100" cy="100" r="90"/>
+              
+<circle class="ring-progress" id="ring-progress" cx="100" cy="100" r="90"                stroke-dasharray="565.48" stroke-dashoffset="0"/>
+            
+</svg>
+            
+<div class="timer-center">
+              
+<span class="timer-time" id="timer-display">
+25:00
+</span>
+              
+<span class="timer-label-small" id="timer-mode-label">
+Focus Session
+</span>
+            
+</div>
+          
+</div>
+          
+<div class="timer-controls">
+            
+<button class="timer-btn" onclick="resetTimer()">
+↺
+</button>
+            
+<button class="timer-btn primary" id="timer-play-btn" onclick="toggleTimer()">
+▶
+</button>
+            
+<button class="timer-btn" onclick="skipTimer()">
+⏭
+</button>
+          
+</div>
+          
+<div class="timer-session-info">
+            
+<span>
+Session: 
+<b id="timer-session-count">
+1
+</b>
+
+</span>
+            
+<span>
+Today: 
+<b id="timer-today-focus">
+0m
+</b>
+
+</span>
+          
+</div>
+        
+</div>
+        
+<div class="timer-sidebar">
+          
+<div class="timer-task-select">
+            
+<h3>
+Active Lesson
+</h3>
+            
+<select id="timer-lesson-select" class="select-styled">
+              
+<option value="">
+— Select a lesson —
+</option>
+            
+</select>
+          
+</div>
+          
+<div class="timer-history">
+            
+<h3>
+Today's Sessions
+</h3>
+            
+<div id="timer-history-list" class="session-list">
+              
+<div class="empty-state-small">
+No sessions yet today.
+</div>
+            
+</div>
+          
+</div>
+        
+</div>
+      
+</div>
+    
+</section>
+  
+</main>
+
+</div>
+
+<!-- ===================== MODALS ===================== -->
+
+<!-- Add Lesson Modal -->
+
+<div id="lesson-modal" class="modal-overlay" onclick="closeModal('lesson-modal')">
+  
+<div class="modal-box" onclick="event.stopPropagation()">
+    
+<div class="modal-header">
+      
+<h3>
+Add New Lesson
+</h3>
+      
+<button class="modal-close" onclick="closeModal('lesson-modal')">
+✕
+</button>
+    
+</div>
+    
+<div class="modal-body">
+      
+<div class="input-group">
+        
+<label>
+Lesson Title *
+</label>
+        
+<input type="text" id="lesson-title" placeholder="e.g. Neural Networks – Key Concepts"/>
+      
+</div>
+      
+<div class="input-group">
+        
+<label>
+Subject / Category
+</label>
+        
+<input type="text" id="lesson-subject" placeholder="e.g. Machine Learning"/>
+      
+</div>
+      
+<div class="input-group">
+        
+<label>
+Priority
+</label>
+        
+<select id="lesson-priority" class="select-styled">
+          
+<option value="high">
+🔴 High
+</option>
+          
+<option value="medium" selected>
+🟡 Medium
+</option>
+          
+<option value="low">
+🟢 Low
+</option>
+        
+</select>
+      
+</div>
+      
+<div class="input-group">
+        
+<label>
+Notes (optional)
+</label>
+        
+<textarea id="lesson-notes" placeholder="Add key points, summary, or paste content...">
+
+</textarea>
+      
+</div>
+      
+<div class="demo-info-box" id="demo-info-box">
+        
+<span>
+⚡ Demo Mode: Revisions compressed (3 days→3 min, 10 days→10 min)
+</span>
+      
+</div>
+    
+</div>
+    
+<div class="modal-footer">
+      
+<button class="btn-secondary" onclick="closeModal('lesson-modal')">
+Cancel
+</button>
+      
+<button class="btn-primary" onclick="addLesson()">
+Add & Schedule
+</button>
+    
+</div>
+  
+</div>
+
+</div>
+
+<!-- Notification Toast -->
+
+<div id="toast-container" class="toast-container">
+
+</div>
+
+<!-- Revision Popup -->
+
+<div id="revision-popup" class="revision-popup" style="display:none">
+  
+<div class="rev-popup-header">
+    
+<span class="rev-popup-icon">
+🔔
+</span>
+    
+<div>
+      
+<h4 id="rev-popup-title">
+Revision Due!
+</h4>
+      
+<p id="rev-popup-subtitle">
+
+</p>
+    
+</div>
+    
+<button onclick="closeRevisionPopup()">
+✕
+</button>
+  
+</div>
+  
+<div class="rev-popup-actions">
+    
+<button class="btn-success" onclick="markRevision('remembered')">
+✅ Remembered
+</button>
+    
+<button class="btn-danger" onclick="markRevision('forgot')">
+❌ Forgot
+</button>
+  
+</div>
+
+</div>
+
+<script src="script.js">
+
+</script>
+
+</body>
+
+</html>
